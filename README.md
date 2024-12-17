@@ -1301,3 +1301,139 @@ To https://github.com/Nick-Lemy/Bundle-4-Exercise-1.git
  * [new branch]      main -> main
 zkaynl7@zkaynl7-ThinkPad-T480:~/Gym-Git-Exercise-Solutions$
 ```
+
+### Exercise 2
+
+```console
+zkaynl7@zkaynl7-ThinkPad-T480:~/Gym-Git-Exercise-Solutions$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+zkaynl7@zkaynl7-ThinkPad-T480:~/Gym-Git-Exercise-Solutions$ git checkout -b ft
+/footer
+Switched to a new branch 'ft/footer'
+zkaynl7@zkaynl7-ThinkPad-T480:~/Gym-Git-Exercise-Solutions$ git add --all
+zkaynl7@zkaynl7-ThinkPad-T480:~/Gym-Git-Exercise-Solutions$ git commit -m "ft/footer created"
+[ft/footer 326190b] ft/footer created
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+zkaynl7@zkaynl7-ThinkPad-T480:~/Gym-Git-Exercise-Solutions$ git add --all
+zkaynl7@zkaynl7-ThinkPad-T480:~/Gym-Git-Exercise-Solutions$ git commit -m "about modified"
+[ft/footer 0751a90] about modified
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+zkaynl7@zkaynl7-ThinkPad-T480:~/Gym-Git-Exercise-Solutions$ git push
+fatal: The current branch ft/footer has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin ft/footer
+
+To have this happen automatically for branches without a tracking
+upstream, see 'push.autoSetupRemote' in 'git help config'.
+
+zkaynl7@zkaynl7-ThinkPad-T480:~/Gym-Git-Exercise-Solutions$ git push --set-upstream origin ft/footer
+Enumerating objects: 8, done.
+Counting objects: 100% (8/8), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (6/6), 616 bytes | 308.00 KiB/s, done.
+Total 6 (delta 4), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (4/4), completed with 2 local objects.
+remote:
+remote: Create a pull request for 'ft/footer' on GitHub by visiting:
+remote:      https://github.com/Nick-Lemy/Gym-Git-Exercise-Solutions/pull/new/ft/footer
+remote:
+To https://github.com/Nick-Lemy/Gym-Git-Exercise-Solutions.git
+ * [new branch]      ft/footer -> ft/footer
+branch 'ft/footer' set up to track 'origin/ft/footer'.
+zkaynl7@zkaynl7-ThinkPad-T480:~/Gym-Git-Exercise-Solutions$ git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+zkaynl7@zkaynl7-ThinkPad-T480:~/Gym-Git-Exercise-Solutions$ git checkout -b ft/squashing
+Switched to a new branch 'ft/squashing'
+zkaynl7@zkaynl7-ThinkPad-T480:~/Gym-Git-Exercise-Solutions$ git merge --squashing ft/footer
+error: unknown option `squashing'
+usage: git merge [<options>] [<commit>...]
+   or: git merge --abort
+   or: git merge --continue
+
+    -n                    do not show a diffstat at the end of the merge
+    --[no-]stat           show a diffstat at the end of the merge
+    --[no-]summary        (synonym to --stat)
+    --[no-]log[=<n>]      add (at most <n>) entries from shortlog to merge commit message
+    --[no-]squash         create a single commit instead of doing a merge
+    --[no-]commit         perform a commit if the merge succeeds (default)
+    -e, --[no-]edit       edit message before committing
+    --[no-]cleanup <mode> how to strip spaces and #comments from message
+    --[no-]ff             allow fast-forward (default)
+    --ff-only             abort if fast-forward is not possible
+    --[no-]rerere-autoupdate
+                          update the index with reused conflict resolution if possible
+    --[no-]verify-signatures
+                          verify that the named commit has a valid GPG signature
+    -s, --[no-]strategy <strategy>
+                          merge strategy to use
+    -X, --[no-]strategy-option <option=value>
+                          option for selected merge strategy
+    -m, --[no-]message <message>
+                          merge commit message (for a non-fast-forward merge)
+    -F, --file <path>     read message from file
+    --[no-]into-name <name>
+                          use <name> instead of the real target
+    -v, --[no-]verbose    be more verbose
+    -q, --[no-]quiet      be more quiet
+    --[no-]abort          abort the current in-progress merge
+    --[no-]quit           --abort but leave index and working tree alone
+    --[no-]continue       continue the current in-progress merge
+    --[no-]allow-unrelated-histories
+                          allow merging unrelated histories
+    --[no-]progress       force progress reporting
+    -S, --[no-]gpg-sign[=<key-id>]
+                          GPG sign commit
+    --[no-]autostash      automatically stash/stash pop before and after
+    --[no-]overwrite-ignore
+                          update ignored files (default)
+    --[no-]signoff        add a Signed-off-by trailer
+    --no-verify           bypass pre-merge-commit and commit-msg hooks
+    --verify              opposite of --no-verify
+
+zkaynl7@zkaynl7-ThinkPad-T480:~/Gym-Git-Exercise-Solutions$ git merge --squash ft/footer
+Updating ff2a4ed..0751a90
+Fast-forward
+Squash commit -- not updating HEAD
+ about.html | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+zkaynl7@zkaynl7-ThinkPad-T480:~/Gym-Git-Exercise-Solutions$ git status
+On branch ft/squashing
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   about.html
+
+zkaynl7@zkaynl7-ThinkPad-T480:~/Gym-Git-Exercise-Solutions$ git commit -m "footer changes squashing"
+[ft/squashing 7f51093] footer changes squashing
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+zkaynl7@zkaynl7-ThinkPad-T480:~/Gym-Git-Exercise-Solutions$ git push
+fatal: The current branch ft/squashing has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin ft/squashing
+
+To have this happen automatically for branches without a tracking
+upstream, see 'push.autoSetupRemote' in 'git help config'.
+
+zkaynl7@zkaynl7-ThinkPad-T480:~/Gym-Git-Exercise-Solutions$ git push --set-upstream origin ft/squashing
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 339 bytes | 169.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+remote:
+remote: Create a pull request for 'ft/squashing' on GitHub by visiting:
+remote:      https://github.com/Nick-Lemy/Gym-Git-Exercise-Solutions/pull/new/ft/squashing
+remote:
+To https://github.com/Nick-Lemy/Gym-Git-Exercise-Solutions.git
+ * [new branch]      ft/squashing -> ft/squashing
+branch 'ft/squashing' set up to track 'origin/ft/squashing'.
+zkaynl7@zkaynl7-ThinkPad-T480:~/Gym-Git-Exercise-Solutions$
+```
