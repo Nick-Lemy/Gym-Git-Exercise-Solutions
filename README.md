@@ -1474,7 +1474,7 @@ To https://github.com/Nick-Lemy/Gym-Git-Exercise-Solutions.git
 #### Exercise 2
 
 ```console
-zkaynl7@zkaynl7-ThinkPad-T480:~$ git clone https://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@github.com/Nick-Lemy/git-cafe-exercise.git
+zkaynl7@zkaynl7-ThinkPad-T480:~$ git clone https://[can't show my tokken]@github.com/Nick-Lemy/git-cafe-exercise.git
 Cloning into 'git-cafe-exercise'...
 remote: Enumerating objects: 107, done.
 remote: Counting objects: 100% (14/14), done.
