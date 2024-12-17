@@ -1470,3 +1470,33 @@ remote: Resolving deltas: 100% (1/1), completed with 1 local object.
 To https://github.com/Nick-Lemy/Gym-Git-Exercise-Solutions.git
    7808315..ced1869  main -> main
 ```
+
+#### Exercise 2
+
+```console
+zkaynl7@zkaynl7-ThinkPad-T480:~$ git clone https://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@github.com/Nick-Lemy/git-cafe-exercise.git
+Cloning into 'git-cafe-exercise'...
+remote: Enumerating objects: 107, done.
+remote: Counting objects: 100% (14/14), done.
+remote: Compressing objects: 100% (10/10), done.
+remote: Total 107 (delta 5), reused 4 (delta 4), pack-reused 93 (from 1)
+Receiving objects: 100% (107/107), 1.95 MiB | 629.00 KiB/s, done.
+Resolving deltas: 100% (5/5), done.
+zkaynl7@zkaynl7-ThinkPad-T480:~$ cd git-cafe-exercise/
+zkaynl7@zkaynl7-ThinkPad-T480:~/git-cafe-exercise$ code .
+zkaynl7@zkaynl7-ThinkPad-T480:~/git-cafe-exercise$ git add --all
+zkaynl7@zkaynl7-ThinkPad-T480:~/git-cafe-exercise$ git commit -m "bundle 5 ex 2"
+[main a5ec8ae] bundle 5 ex 2
+ 1 file changed, 399 insertions(+), 239 deletions(-)
+zkaynl7@zkaynl7-ThinkPad-T480:~/git-cafe-exercise$ git push
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 1.57 KiB | 401.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/Nick-Lemy/git-cafe-exercise.git
+   d1d3f9c..a5ec8ae  main -> main
+zkaynl7@zkaynl7-ThinkPad-T480:~/git-cafe-exercise$
+```
