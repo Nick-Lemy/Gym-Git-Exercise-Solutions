@@ -1437,3 +1437,36 @@ To https://github.com/Nick-Lemy/Gym-Git-Exercise-Solutions.git
 branch 'ft/squashing' set up to track 'origin/ft/squashing'.
 zkaynl7@zkaynl7-ThinkPad-T480:~/Gym-Git-Exercise-Solutions$
 ```
+
+## Bundle 5
+
+### Exercise 1
+
+```console
+zkaynl7@zkaynl7-ThinkPad-T480:~/Gym-Git-Exercise-Solutions$ git checkout main
+Switched to branch 'main'
+Your branch is behind 'origin/main' by 3 commits, and can be fast-forwarded.
+  (use "git pull" to update your local branch)
+zkaynl7@zkaynl7-ThinkPad-T480:~/Gym-Git-Exercise-Solutions$ git pull
+Updating ff2a4ed..7808315
+Fast-forward
+ README.md  | 136 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ about.html |   4 +-
+ 2 files changed, 138 insertions(+), 2 deletions(-)
+zkaynl7@zkaynl7-ThinkPad-T480:~/Gym-Git-Exercise-Solutions$ mv home.html index.html
+zkaynl7@zkaynl7-ThinkPad-T480:~/Gym-Git-Exercise-Solutions$ git add --all
+zkaynl7@zkaynl7-ThinkPad-T480:~/Gym-Git-Exercise-Solutions$ git commit -m "home.html to index.html"
+[main ced1869] home.html to index.html
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ rename home.html => index.html (100%)
+zkaynl7@zkaynl7-ThinkPad-T480:~/Gym-Git-Exercise-Solutions$ git push origin main
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (2/2), 245 bytes | 245.00 KiB/s, done.
+Total 2 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/Nick-Lemy/Gym-Git-Exercise-Solutions.git
+   7808315..ced1869  main -> main
+```
