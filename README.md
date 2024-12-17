@@ -488,3 +488,700 @@ On branch ft/service-redesign
 nothing to commit, working tree clean
 zkaynl7@zkaynl7-ThinkPad-T480:~/Gym-Git-Exercise-Solutions$
 ```
+
+## Bundle 3
+
+### Exercise 1
+
+```console
+zkaynl7@zkaynl7-ThinkPad-T480:~/Gym-Git-Exercise-Solutions$ git status
+On branch ft/service-redesign
+nothing to commit, working tree clean
+zkaynl7@zkaynl7-ThinkPad-T480:~/Gym-Git-Exercise-Solutions$ git checkout -b ft/team-page
+Switched to a new branch 'ft/team-page'
+zkaynl7@zkaynl7-ThinkPad-T480:~/Gym-Git-Exercise-Solutions$ touch team.html
+zkaynl7@zkaynl7-ThinkPad-T480:~/Gym-Git-Exercise-Solutions$ git add --all
+zkaynl7@zkaynl7-ThinkPad-T480:~/Gym-Git-Exercise-Solutions$ git commit -m "Bundle 3, let's goo"
+[ft/team-page 9dab256] Bundle 3, let's goo
+ 1 file changed, 11 insertions(+)
+ create mode 100644 team.html
+zkaynl7@zkaynl7-ThinkPad-T480:~/Gym-Git-Exercise-Solutions$ git push origin ft/team-page
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 459 bytes | 229.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+remote:
+remote: Create a pull request for 'ft/team-page' on GitHub by visiting:
+remote:      https://github.com/Nick-Lemy/Gym-Git-Exercise-Solutions/pull/new/ft/team-page
+remote:
+To https://github.com/Nick-Lemy/Gym-Git-Exercise-Solutions.git
+ * [new branch]      ft/team-page -> ft/team-page
+zkaynl7@zkaynl7-ThinkPad-T480:~/Gym-Git-Exercise-Solutions$ git checkout main
+Switched to branch 'main'
+Your branch is behind 'origin/main' by 6 commits, and can be fast-forwarded.
+  (use "git pull" to update your local branch)
+zkaynl7@zkaynl7-ThinkPad-T480:~/Gym-Git-Exercise-Solutions$ git pull
+Updating 859f4be..0d6c337
+Fast-forward
+ README.md | 218 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 1 file changed, 218 insertions(+)
+zkaynl7@zkaynl7-ThinkPad-T480:~/Gym-Git-Exercise-Solutions$ git checkout -b ft/contact-page
+Switched to a new branch 'ft/contact-page'
+zkaynl7@zkaynl7-ThinkPad-T480:~/Gym-Git-Exercise-Solutions$ git checkout ft/team-page
+Switched to branch 'ft/team-page'
+zkaynl7@zkaynl7-ThinkPad-T480:~/Gym-Git-Exercise-Solutions$ git log
+commit 9dab2564a4ddf2ec95e3d5aad7415ca7145fdc63 (HEAD -> ft/team-page, origin/ft/team-page)
+Author: Nick-Lemy <n.kayiranga@alustudent.com>
+Date:   Tue Dec 17 15:47:23 2024 +0200
+
+    Bundle 3, let's goo
+
+commit 5f7ff0f94a1a5bdc175efdfab48ec4753a5c8b39 (origin/ft/service-redesign, ft/service-redesign)
+Author: Nick-Lemy <n.kayiranga@alustudent.com>
+Date:   Tue Dec 17 15:40:06 2024 +0200
+
+    README.md
+
+commit c3096e8345486a06127f5d437734095cd38eb15a
+Author: Nick-Lemy <n.kayiranga@alustudent.com>
+Date:   Tue Dec 17 15:36:33 2024 +0200
+
+    okay
+
+commit da9b0d8c6862bd469ef217133fd05b053630860a
+Merge: 1146a69 859f4be
+Author: Nick-Lemy <n.kayiranga@alustudent.com>
+Date:   Tue Dec 17 15:33:06 2024 +0200
+
+    almost done
+
+commit 859f4bed40a4b4d9abab2e9e10164773ef93072d
+Author: Nick-Lemy <n.kayiranga@alustudent.com>
+Date:   Tue Dec 17 15:14:42 2024 +0200
+
+    service.html changed
+
+commit 1146a69c27e960e617fe3621e7df93d4377fc292
+Author: Nick-Lemy <n.kayiranga@alustudent.com>
+Date:   Tue Dec 17 15:07:28 2024 +0200
+
+    Update service.html
+
+commit c9b68baf8d69618bfa2f5e8646a539696f2a1a81
+Merge: e7fff88 0bf5e00
+Author: Nick-Lemy Niyigena Kayiranga <169042721+Nick-Lemy@users.noreply.github.com>
+Date:   Tue Dec 17 14:37:37 2024 +0200
+
+    Merge pull request #1 from Nick-Lemy/ft/bundle-2
+
+    adding html pages
+
+commit e7fff88384a2c8f4ca7d6495c75a1532ca35d2d4
+Author: Nick-Lemy <n.kayiranga@alustudent.com>
+Date:   Tue Dec 17 14:36:43 2024 +0200
+
+    ll
+
+commit 0bf5e00b8df78a8d1662828b632e1c715f2d835b (origin/ft/bundle-2, ft/bundle-2)
+Author: Nick-Lemy <n.kayiranga@alustudent.com>
+Date:   Tue Dec 17 14:32:55 2024 +0200
+
+    Description added
+
+commit fed067d37e6355850863328bc1f3936a5e1a5896
+Author: Nick-Lemy <n.kayiranga@alustudent.com>
+Date:   Tue Dec 17 12:54:06 2024 +0200
+
+    Service created
+
+commit ee4277938cc511c5169b6532541e083f279be17d
+Author: Nick-Lemy <n.kayiranga@alustudent.com>
+Date:   Tue Dec 17 12:43:21 2024 +0200
+
+    !
+
+commit 1c601d1534bde175ddc196b0d3667eae573ca980 (origin/dev, dev)
+Author: Nick-Lemy <n.kayiranga@alustudent.com>
+Date:   Tue Dec 17 12:42:00 2024 +0200
+
+    !
+
+commit a31ca6eefa9d951662acdf3d4c32f445f0e508ba
+Author: Nick-Lemy <n.kayiranga@alustudent.com>
+Date:   Tue Dec 17 12:39:15 2024 +0200
+
+    !
+
+commit 44dd93fa16d8f66c6a4c9922271aa0713b23804d
+Author: Nick-Lemy <n.kayiranga@alustudent.com>
+Date:   Tue Dec 17 12:34:11 2024 +0200
+
+    !
+
+commit 9af481f67d2ce537cb1b31ec90d8093019f7c3c3
+Author: Nick-Lemy <n.kayiranga@alustudent.com>
+Date:   Tue Dec 17 11:49:24 2024 +0200
+
+    README.md updated for exercise 2 Bundle 1
+
+commit eccf05cae84372ebbf344829efabe49589060b54
+Author: Nick-Lemy <n.kayiranga@alustudent.com>
+Date:   Tue Dec 17 11:45:29 2024 +0200
+
+    Changes committed and ready to be pushed
+
+commit 0613e6aacf571633999d4efc1a022d5c22284eae
+Author: Nick-Lemy Niyigena Kayiranga <169042721+Nick-Lemy@users.noreply.github.com>
+Date:   Tue Dec 17 10:44:38 2024 +0200
+
+    Update README.md
+
+commit 1956995b24665d0d9498a3b34034d31905aa9e24
+Author: Nick-Lemy Niyigena Kayiranga <169042721+Nick-Lemy@users.noreply.github.com>
+Date:   Tue Dec 17 10:44:13 2024 +0200
+
+    Update README.md
+
+commit 0db4e20fe5b66cbc4148d9c38b12a7c786265f45
+Author: Nick-Lemy Niyigena Kayiranga <169042721+Nick-Lemy@users.noreply.github.com>
+Date:   Tue Dec 17 10:43:34 2024 +0200
+
+    Update README.md
+
+commit 4658a51ada13ab60824cdbc34d6a9a962ed3969b
+Author: Nick-Lemy <n.kayiranga@alustudent.com>
+Date:   Tue Dec 17 10:40:16 2024 +0200
+
+    README.md
+
+commit 105331f53708988d278555a699ae15e7b471538c
+Author: Nick-Lemy <n.kayiranga@alustudent.com>
+Date:   Tue Dec 17 10:37:45 2024 +0200
+
+    README.md
+
+commit 6edd66b0b2966368f55e98756a51c37226ba26db
+Author: Nick-Lemy <n.kayiranga@alustudent.com>
+Date:   Tue Dec 17 10:16:37 2024 +0200
+
+    changes staged and committed
+zkaynl7@zkaynl7-ThinkPad-T480:~/Gym-Git-Exercise-Solutions$ git status
+On branch ft/team-page
+nothing to commit, working tree clean
+zkaynl7@zkaynl7-ThinkPad-T480:~/Gym-Git-Exercise-Solutions$ git checkout ft/contact-page
+Switched to branch 'ft/contact-page'
+zkaynl7@zkaynl7-ThinkPad-T480:~/Gym-Git-Exercise-Solutions$ git cherry-pick 6edd66b0b2966368f55e98756a51c37226ba26db
+[ft/contact-page 7341601] changes staged and committed
+ Date: Tue Dec 17 10:16:37 2024 +0200
+ 1 file changed, 1 insertion(+)
+ create mode 100644 test_file
+zkaynl7@zkaynl7-ThinkPad-T480:~/Gym-Git-Exercise-Solutions$ git cherry-pick 9dab2564a4ddf2ec95e3d5aad7415ca7145fdc63
+[ft/contact-page d70007e] Bundle 3, let's goo
+ Date: Tue Dec 17 15:47:23 2024 +0200
+ 1 file changed, 11 insertions(+)
+ create mode 100644 team.html
+zkaynl7@zkaynl7-ThinkPad-T480:~/Gym-Git-Exercise-Solutions$ ls
+about.html  home.html  README.md  service.html  team.html  test_file
+zkaynl7@zkaynl7-ThinkPad-T480:~/Gym-Git-Exercise-Solutions$ rm -rf te
+team.html  test_file
+zkaynl7@zkaynl7-ThinkPad-T480:~/Gym-Git-Exercise-Solutions$ rm -rf test_file
+zkaynl7@zkaynl7-ThinkPad-T480:~/Gym-Git-Exercise-Solutions$ ls
+about.html  home.html  README.md  service.html  team.html
+zkaynl7@zkaynl7-ThinkPad-T480:~/Gym-Git-Exercise-Solutions$ git --add
+unknown option: --add
+usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]
+           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]
+           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]
+           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]
+           [--config-env=<name>=<envvar>] <command> [<args>]
+zkaynl7@zkaynl7-ThinkPad-T480:~/Gym-Git-Exercise-Solutions$ git add --all
+zkaynl7@zkaynl7-ThinkPad-T480:~/Gym-Git-Exercise-Solutions$ git commit -m "Okayy"
+[ft/contact-page c9b2a39] Okayy
+ 1 file changed, 1 deletion(-)
+ delete mode 100644 test_file
+zkaynl7@zkaynl7-ThinkPad-T480:~/Gym-Git-Exercise-Solutions$ git status
+On branch ft/contact-page
+nothing to commit, working tree clean
+zkaynl7@zkaynl7-ThinkPad-T480:~/Gym-Git-Exercise-Solutions$ git push
+fatal: The current branch ft/contact-page has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin ft/contact-page
+
+To have this happen automatically for branches without a tracking
+upstream, see 'push.autoSetupRemote' in 'git help config'.
+
+zkaynl7@zkaynl7-ThinkPad-T480:~/Gym-Git-Exercise-Solutions$ git push origin ft/contact-page
+Enumerating objects: 9, done.
+Counting objects: 100% (9/9), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (7/7), done.
+Writing objects: 100% (8/8), 889 bytes | 889.00 KiB/s, done.
+Total 8 (delta 3), reused 1 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (3/3), completed with 1 local object.
+remote:
+remote: Create a pull request for 'ft/contact-page' on GitHub by visiting:
+remote:      https://github.com/Nick-Lemy/Gym-Git-Exercise-Solutions/pull/new/ft/contact-page
+remote:
+To https://github.com/Nick-Lemy/Gym-Git-Exercise-Solutions.git
+ * [new branch]      ft/contact-page -> ft/contact-page
+zkaynl7@zkaynl7-ThinkPad-T480:~/Gym-Git-Exercise-Solutions$ git status
+On branch ft/contact-page
+nothing to commit, working tree clean
+zkaynl7@zkaynl7-ThinkPad-T480:~/Gym-Git-Exercise-Solutions$ git checkout -b ft/faq-page
+Switched to a new branch 'ft/faq-page'
+zkaynl7@zkaynl7-ThinkPad-T480:~/Gym-Git-Exercise-Solutions$ ls
+about.html  home.html  README.md  service.html  team.html
+zkaynl7@zkaynl7-ThinkPad-T480:~/Gym-Git-Exercise-Solutions$ touch faq.html
+zkaynl7@zkaynl7-ThinkPad-T480:~/Gym-Git-Exercise-Solutions$ git add --all
+zkaynl7@zkaynl7-ThinkPad-T480:~/Gym-Git-Exercise-Solutions$ git commit -m "FAQ page added"
+[ft/faq-page 3ec5fe0] FAQ page added
+ 1 file changed, 11 insertions(+)
+ create mode 100644 faq.html
+zkaynl7@zkaynl7-ThinkPad-T480:~/Gym-Git-Exercise-Solutions$ git push origin ft/faq-page
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 437 bytes | 437.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+remote:
+remote: Create a pull request for 'ft/faq-page' on GitHub by visiting:
+remote:      https://github.com/Nick-Lemy/Gym-Git-Exercise-Solutions/pull/new/ft/faq-page
+remote:
+To https://github.com/Nick-Lemy/Gym-Git-Exercise-Solutions.git
+ * [new branch]      ft/faq-page -> ft/faq-page
+zkaynl7@zkaynl7-ThinkPad-T480:~/Gym-Git-Exercise-Solutions$ git checkout ft/team-page
+Switched to branch 'ft/team-page'
+zkaynl7@zkaynl7-ThinkPad-T480:~/Gym-Git-Exercise-Solutions$ git log
+commit 9dab2564a4ddf2ec95e3d5aad7415ca7145fdc63 (HEAD -> ft/team-page, origin/ft/team-page)
+Author: Nick-Lemy <n.kayiranga@alustudent.com>
+Date:   Tue Dec 17 15:47:23 2024 +0200
+
+    Bundle 3, let's goo
+
+commit 5f7ff0f94a1a5bdc175efdfab48ec4753a5c8b39 (origin/ft/service-redesign, ft/service-redesign)
+Author: Nick-Lemy <n.kayiranga@alustudent.com>
+Date:   Tue Dec 17 15:40:06 2024 +0200
+
+    README.md
+
+commit c3096e8345486a06127f5d437734095cd38eb15a
+Author: Nick-Lemy <n.kayiranga@alustudent.com>
+Date:   Tue Dec 17 15:36:33 2024 +0200
+
+    okay
+
+commit da9b0d8c6862bd469ef217133fd05b053630860a
+Merge: 1146a69 859f4be
+Author: Nick-Lemy <n.kayiranga@alustudent.com>
+Date:   Tue Dec 17 15:33:06 2024 +0200
+
+    almost done
+zkaynl7@zkaynl7-ThinkPad-T480:~/Gym-Git-Exercise-Solutions$ git checkout ft/faq-page
+Switched to branch 'ft/faq-page'
+zkaynl7@zkaynl7-ThinkPad-T480:~/Gym-Git-Exercise-Solutions$ git log
+commit 3ec5fe03a73486d221a7b80e259283b4ce7ba78f (HEAD -> ft/faq-page, origin/ft/faq-page)
+Author: Nick-Lemy <n.kayiranga@alustudent.com>
+Date:   Tue Dec 17 16:00:36 2024 +0200
+
+    FAQ page added
+
+commit c9b2a392f692669561ea6267cbfeffc1e4878c0c (origin/ft/contact-page, ft/contact-page)
+Author: Nick-Lemy <n.kayiranga@alustudent.com>
+Date:   Tue Dec 17 15:57:14 2024 +0200
+
+    Okayy
+
+commit d70007e65436be6adeb71526d61fb45dcd953ed5
+Author: Nick-Lemy <n.kayiranga@alustudent.com>
+Date:   Tue Dec 17 15:47:23 2024 +0200
+
+    Bundle 3, let's goo
+
+commit 7341601ea81e75379334f5fb85c26fe8e1e6eef9
+Author: Nick-Lemy <n.kayiranga@alustudent.com>
+Date:   Tue Dec 17 10:16:37 2024 +0200
+
+    changes staged and committed
+
+commit 0d6c337925f6cf0a7089629d5bf1fa55b6c74b91 (origin/main, origin/HEAD, main)
+Merge: eeb513f 5f7ff0f
+Author: Nick-Lemy Niyigena Kayiranga <169042721+Nick-Lemy@users.noreply.github.com>
+Date:   Tue Dec 17 15:42:18 2024 +0200
+
+    Merge pull request #3 from Nick-Lemy/ft/service-redesign
+
+    README.md
+
+commit 5f7ff0f94a1a5bdc175efdfab48ec4753a5c8b39 (origin/ft/service-redesign, ft/service-re
+design)
+Author: Nick-Lemy <n.kayiranga@alustudent.com>
+Date:   Tue Dec 17 15:40:06 2024 +0200
+
+    README.md
+
+commit eeb513fb7e31c7a44d06e78f9a6efa22dc16069a
+Merge: 859f4be c3096e8
+Author: Nick-Lemy Niyigena Kayiranga <169042721+Nick-Lemy@users.noreply.github.com>
+Date:   Tue Dec 17 15:37:27 2024 +0200
+
+    Merge pull request #2 from Nick-Lemy/ft/service-redesign
+
+    Update service.html
+
+commit c3096e8345486a06127f5d437734095cd38eb15a
+Author: Nick-Lemy <n.kayiranga@alustudent.com>
+Date:   Tue Dec 17 15:36:33 2024 +0200
+
+    okay
+
+commit da9b0d8c6862bd469ef217133fd05b053630860a
+Merge: 1146a69 859f4be
+Author: Nick-Lemy <n.kayiranga@alustudent.com>
+Date:   Tue Dec 17 15:33:06 2024 +0200
+
+    almost done
+
+commit 859f4bed40a4b4d9abab2e9e10164773ef93072d
+Author: Nick-Lemy <n.kayiranga@alustudent.com>
+Date:   Tue Dec 17 15:14:42 2024 +0200
+
+    service.html changed
+
+commit 1146a69c27e960e617fe3621e7df93d4377fc292
+Author: Nick-Lemy <n.kayiranga@alustudent.com>
+Date:   Tue Dec 17 15:07:28 2024 +0200
+
+    Update service.html
+
+commit c9b68baf8d69618bfa2f5e8646a539696f2a1a81
+Merge: e7fff88 0bf5e00
+Author: Nick-Lemy Niyigena Kayiranga <169042721+Nick-Lemy@users.noreply.github.com>
+Date:   Tue Dec 17 14:37:37 2024 +0200
+
+    Merge pull request #1 from Nick-Lemy/ft/bundle-2
+
+    adding html pages
+
+commit e7fff88384a2c8f4ca7d6495c75a1532ca35d2d4
+Author: Nick-Lemy <n.kayiranga@alustudent.com>
+Date:   Tue Dec 17 14:36:43 2024 +0200
+
+    ll
+
+commit 0bf5e00b8df78a8d1662828b632e1c715f2d835b (origin/ft/bundle-2, ft/bundle-2)
+Author: Nick-Lemy <n.kayiranga@alustudent.com>
+Date:   Tue Dec 17 14:32:55 2024 +0200
+
+    Description added
+
+commit fed067d37e6355850863328bc1f3936a5e1a5896
+Author: Nick-Lemy <n.kayiranga@alustudent.com>
+Date:   Tue Dec 17 12:54:06 2024 +0200
+
+    Service created
+
+commit ee4277938cc511c5169b6532541e083f279be17d
+Author: Nick-Lemy <n.kayiranga@alustudent.com>
+Date:   Tue Dec 17 12:43:21 2024 +0200
+
+    !
+
+commit 1c601d1534bde175ddc196b0d3667eae573ca980 (origin/dev, dev)
+Author: Nick-Lemy <n.kayiranga@alustudent.com>
+Date:   Tue Dec 17 12:42:00 2024 +0200
+
+    !
+
+commit a31ca6eefa9d951662acdf3d4c32f445f0e508ba
+Author: Nick-Lemy <n.kayiranga@alustudent.com>
+Date:   Tue Dec 17 12:39:15 2024 +0200
+
+    !
+
+commit 44dd93fa16d8f66c6a4c9922271aa0713b23804d
+Author: Nick-Lemy <n.kayiranga@alustudent.com>
+Date:   Tue Dec 17 12:34:11 2024 +0200
+
+    !
+
+commit 9af481f67d2ce537cb1b31ec90d8093019f7c3c3
+Author: Nick-Lemy <n.kayiranga@alustudent.com>
+Date:   Tue Dec 17 11:49:24 2024 +0200
+
+    README.md updated for exercise 2 Bundle 1
+
+commit eccf05cae84372ebbf344829efabe49589060b54
+Author: Nick-Lemy <n.kayiranga@alustudent.com>
+Date:   Tue Dec 17 11:45:29 2024 +0200
+
+    Changes committed and ready to be pushed
+
+commit 0613e6aacf571633999d4efc1a022d5c22284eae
+Author: Nick-Lemy Niyigena Kayiranga <169042721+Nick-Lemy@users.noreply.github.com>
+Date:   Tue Dec 17 10:44:38 2024 +0200
+
+    Update README.md
+
+commit 1956995b24665d0d9498a3b34034d31905aa9e24
+Author: Nick-Lemy Niyigena Kayiranga <169042721+Nick-Lemy@users.noreply.github.com>
+Date:   Tue Dec 17 10:44:13 2024 +0200
+
+    Update README.md
+
+commit 0db4e20fe5b66cbc4148d9c38b12a7c786265f45
+Author: Nick-Lemy Niyigena Kayiranga <169042721+Nick-Lemy@users.noreply.github.com>
+Date:   Tue Dec 17 10:43:34 2024 +0200
+
+    Update README.md
+
+commit 4658a51ada13ab60824cdbc34d6a9a962ed3969b
+Author: Nick-Lemy <n.kayiranga@alustudent.com>
+Date:   Tue Dec 17 10:40:16 2024 +0200
+
+    README.md
+
+commit 105331f53708988d278555a699ae15e7b471538c
+Author: Nick-Lemy <n.kayiranga@alustudent.com>
+Date:   Tue Dec 17 10:37:45 2024 +0200
+
+    README.md
+
+commit 6edd66b0b2966368f55e98756a51c37226ba26db
+Author: Nick-Lemy <n.kayiranga@alustudent.com>
+Date:   Tue Dec 17 10:16:37 2024 +0200
+
+    changes staged and committed
+zkaynl7@zkaynl7-ThinkPad-T480:~/Gym-Git-Exercise-Solutions$ git log
+commit 3ec5fe03a73486d221a7b80e259283b4ce7ba78f (HEAD -> ft/faq-page, origin/ft/faq-page)
+Author: Nick-Lemy <n.kayiranga@alustudent.com>
+Date:   Tue Dec 17 16:00:36 2024 +0200
+
+    FAQ page added
+
+commit c9b2a392f692669561ea6267cbfeffc1e4878c0c (origin/ft/contact-page, ft/contact-page)
+Author: Nick-Lemy <n.kayiranga@alustudent.com>
+Date:   Tue Dec 17 15:57:14 2024 +0200
+
+    Okayy
+
+commit d70007e65436be6adeb71526d61fb45dcd953ed5
+Author: Nick-Lemy <n.kayiranga@alustudent.com>
+Date:   Tue Dec 17 15:47:23 2024 +0200
+
+    Bundle 3, let's goo
+
+commit 7341601ea81e75379334f5fb85c26fe8e1e6eef9
+Author: Nick-Lemy <n.kayiranga@alustudent.com>
+Date:   Tue Dec 17 10:16:37 2024 +0200
+
+    changes staged and committed
+
+commit 0d6c337925f6cf0a7089629d5bf1fa55b6c74b91 (origin/main, origin/HEAD, main)
+Merge: eeb513f 5f7ff0f
+Author: Nick-Lemy Niyigena Kayiranga <169042721+Nick-Lemy@users.noreply.github.com>
+Date:   Tue Dec 17 15:42:18 2024 +0200
+
+    Merge pull request #3 from Nick-Lemy/ft/service-redesign
+
+    README.md
+
+commit 5f7ff0f94a1a5bdc175efdfab48ec4753a5c8b39 (origin/ft/service-redesign, ft/service-re
+design)
+Author: Nick-Lemy <n.kayiranga@alustudent.com>
+Date:   Tue Dec 17 15:40:06 2024 +0200
+
+    README.md
+
+commit eeb513fb7e31c7a44d06e78f9a6efa22dc16069a
+Merge: 859f4be c3096e8
+Author: Nick-Lemy Niyigena Kayiranga <169042721+Nick-Lemy@users.noreply.github.com>
+Date:   Tue Dec 17 15:37:27 2024 +0200
+
+    Merge pull request #2 from Nick-Lemy/ft/service-redesign
+
+    Update service.html
+
+commit c3096e8345486a06127f5d437734095cd38eb15a
+Author: Nick-Lemy <n.kayiranga@alustudent.com>
+Date:   Tue Dec 17 15:36:33 2024 +0200
+
+    okay
+
+commit da9b0d8c6862bd469ef217133fd05b053630860a
+Merge: 1146a69 859f4be
+Author: Nick-Lemy <n.kayiranga@alustudent.com>
+Date:   Tue Dec 17 15:33:06 2024 +0200
+
+    almost done
+
+commit 859f4bed40a4b4d9abab2e9e10164773ef93072d
+Author: Nick-Lemy <n.kayiranga@alustudent.com>
+Date:   Tue Dec 17 15:14:42 2024 +0200
+
+    service.html changed
+
+commit 1146a69c27e960e617fe3621e7df93d4377fc292
+Author: Nick-Lemy <n.kayiranga@alustudent.com>
+Date:   Tue Dec 17 15:07:28 2024 +0200
+
+    Update service.html
+
+commit c9b68baf8d69618bfa2f5e8646a539696f2a1a81
+Merge: e7fff88 0bf5e00
+Author: Nick-Lemy Niyigena Kayiranga <169042721+Nick-Lemy@users.noreply.github.com>
+Date:   Tue Dec 17 14:37:37 2024 +0200
+
+    Merge pull request #1 from Nick-Lemy/ft/bundle-2
+
+    adding html pages
+
+commit e7fff88384a2c8f4ca7d6495c75a1532ca35d2d4
+Author: Nick-Lemy <n.kayiranga@alustudent.com>
+Date:   Tue Dec 17 14:36:43 2024 +0200
+
+    ll
+
+commit 0bf5e00b8df78a8d1662828b632e1c715f2d835b (origin/ft/bundle-2, ft/bundle-2)
+Author: Nick-Lemy <n.kayiranga@alustudent.com>
+Date:   Tue Dec 17 14:32:55 2024 +0200
+
+    Description added
+
+commit fed067d37e6355850863328bc1f3936a5e1a5896
+Author: Nick-Lemy <n.kayiranga@alustudent.com>
+Date:   Tue Dec 17 12:54:06 2024 +0200
+
+    Service created
+
+commit ee4277938cc511c5169b6532541e083f279be17d
+Author: Nick-Lemy <n.kayiranga@alustudent.com>
+Date:   Tue Dec 17 12:43:21 2024 +0200
+
+    !
+
+commit 1c601d1534bde175ddc196b0d3667eae573ca980 (origin/dev, dev)
+Author: Nick-Lemy <n.kayiranga@alustudent.com>
+Date:   Tue Dec 17 12:42:00 2024 +0200
+
+    !
+
+commit a31ca6eefa9d951662acdf3d4c32f445f0e508ba
+Author: Nick-Lemy <n.kayiranga@alustudent.com>
+Date:   Tue Dec 17 12:39:15 2024 +0200
+
+    !
+
+commit 44dd93fa16d8f66c6a4c9922271aa0713b23804d
+Author: Nick-Lemy <n.kayiranga@alustudent.com>
+Date:   Tue Dec 17 12:34:11 2024 +0200
+
+    !
+
+commit 9af481f67d2ce537cb1b31ec90d8093019f7c3c3
+Author: Nick-Lemy <n.kayiranga@alustudent.com>
+Date:   Tue Dec 17 11:49:24 2024 +0200
+
+    README.md updated for exercise 2 Bundle 1
+
+commit eccf05cae84372ebbf344829efabe49589060b54
+Author: Nick-Lemy <n.kayiranga@alustudent.com>
+Date:   Tue Dec 17 11:45:29 2024 +0200
+
+    Changes committed and ready to be pushed
+
+commit 0613e6aacf571633999d4efc1a022d5c22284eae
+Author: Nick-Lemy Niyigena Kayiranga <169042721+Nick-Lemy@users.noreply.github.com>
+Date:   Tue Dec 17 10:44:38 2024 +0200
+
+    Update README.md
+
+commit 1956995b24665d0d9498a3b34034d31905aa9e24
+Author: Nick-Lemy Niyigena Kayiranga <169042721+Nick-Lemy@users.noreply.github.com>
+Date:   Tue Dec 17 10:44:13 2024 +0200
+
+    Update README.md
+
+commit 0db4e20fe5b66cbc4148d9c38b12a7c786265f45
+Author: Nick-Lemy Niyigena Kayiranga <169042721+Nick-Lemy@users.noreply.github.com>
+Date:   Tue Dec 17 10:43:34 2024 +0200
+
+    Update README.md
+
+commit 4658a51ada13ab60824cdbc34d6a9a962ed3969b
+Author: Nick-Lemy <n.kayiranga@alustudent.com>
+Date:   Tue Dec 17 10:40:16 2024 +0200
+
+    README.md
+
+commit 105331f53708988d278555a699ae15e7b471538c
+Author: Nick-Lemy <n.kayiranga@alustudent.com>
+Date:   Tue Dec 17 10:37:45 2024 +0200
+
+    README.md
+
+commit 6edd66b0b2966368f55e98756a51c37226ba26db
+Author: Nick-Lemy <n.kayiranga@alustudent.com>
+Date:   Tue Dec 17 10:16:37 2024 +0200
+
+    changes staged and committed
+zkaynl7@zkaynl7-ThinkPad-T480:~/Gym-Git-Exercise-Solutions$ git checkout ft/team-page
+Switched to branch 'ft/team-page'
+zkaynl7@zkaynl7-ThinkPad-T480:~/Gym-Git-Exercise-Solutions$ git log
+commit 9dab2564a4ddf2ec95e3d5aad7415ca7145fdc63 (HEAD -> ft/team-page, origin/ft/team-page)
+Author: Nick-Lemy <n.kayiranga@alustudent.com>
+Date:   Tue Dec 17 15:47:23 2024 +0200
+
+    Bundle 3, let's goo
+
+commit 5f7ff0f94a1a5bdc175efdfab48ec4753a5c8b39 (origin/ft/service-redesign, ft/service-redesign)
+Author: Nick-Lemy <n.kayiranga@alustudent.com>
+Date:   Tue Dec 17 15:40:06 2024 +0200
+
+    README.md
+
+commit c3096e8345486a06127f5d437734095cd38eb15a
+Author: Nick-Lemy <n.kayiranga@alustudent.com>
+Date:   Tue Dec 17 15:36:33 2024 +0200
+
+    okay
+
+commit da9b0d8c6862bd469ef217133fd05b053630860a
+Merge: 1146a69 859f4be
+Author: Nick-Lemy <n.kayiranga@alustudent.com>
+Date:   Tue Dec 17 15:33:06 2024 +0200
+
+    almost done
+zkaynl7@zkaynl7-ThinkPad-T480:~/Gym-Git-Exercise-Solutions$ git revert 9dab2564a4ddf2ec95e3d5aad7415ca7145fdc63
+[ft/team-page dd068c5] Revert "Bundle 3, let's goo"
+ 1 file changed, 11 deletions(-)
+ delete mode 100644 team.html
+zkaynl7@zkaynl7-ThinkPad-T480:~/Gym-Git-Exercise-Solutions$ git add .
+zkaynl7@zkaynl7-ThinkPad-T480:~/Gym-Git-Exercise-Solutions$ git commit -m "hum"
+On branch ft/team-page
+nothing to commit, working tree clean
+zkaynl7@zkaynl7-ThinkPad-T480:~/Gym-Git-Exercise-Solutions$ git push
+fatal: The current branch ft/team-page has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin ft/team-page
+
+To have this happen automatically for branches without a tracking
+upstream, see 'push.autoSetupRemote' in 'git help config'.
+
+zkaynl7@zkaynl7-ThinkPad-T480:~/Gym-Git-Exercise-Solutions$ git push origin ft/team-page
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (2/2), 265 bytes | 265.00 KiB/s, done.
+Total 2 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/Nick-Lemy/Gym-Git-Exercise-Solutions.git
+   9dab256..dd068c5  ft/team-page -> ft/team-page
+```
