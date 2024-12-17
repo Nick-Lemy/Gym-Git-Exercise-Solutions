@@ -3,7 +3,7 @@
 ## Bundle 1
 
 ### Exercise 1
-```bash
+```console
 zkaynl7@zkaynl7-ThinkPad-T480:~/Documents/git-bundle$ mkdir exercise-1
 zkaynl7@zkaynl7-ThinkPad-T480:~/Documents/git-bundle$ cd exercise-1/
 zkaynl7@zkaynl7-ThinkPad-T480:~/Documents/git-bundle/exercise-1$ git init
