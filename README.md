@@ -160,22 +160,22 @@ zkaynl7@zkaynl7-ThinkPad-T480:~/Documents/git-bundle/exercise-1$ nano README.md
 zkaynl7@zkaynl7-ThinkPad-T480:~/Gym-Git-Exercise-Solutions$ touch home.html
 zkaynl7@zkaynl7-ThinkPad-T480:~/Gym-Git-Exercise-Solutions$ git add home.html
 zkaynl7@zkaynl7-ThinkPad-T480:~/Gym-Git-Exercise-Solutions$ git stash
-Saved working directory and index state WIP on main: 0613e6a Update README.md
+Saved working directory and index state WIP on dev: 0613e6a Update README.md
 zkaynl7@zkaynl7-ThinkPad-T480:~/Gym-Git-Exercise-Solutions$ touch about.html
 zkaynl7@zkaynl7-ThinkPad-T480:~/Gym-Git-Exercise-Solutions$ git add about.html
 zkaynl7@zkaynl7-ThinkPad-T480:~/Gym-Git-Exercise-Solutions$ git stash
-Saved working directory and index state WIP on main: 0613e6a Update README.md
+Saved working directory and index state WIP on dev: 0613e6a Update README.md
 zkaynl7@zkaynl7-ThinkPad-T480:~/Gym-Git-Exercise-Solutions$ touch team.html
 zkaynl7@zkaynl7-ThinkPad-T480:~/Gym-Git-Exercise-Solutions$ git add team.html
 zkaynl7@zkaynl7-ThinkPad-T480:~/Gym-Git-Exercise-Solutions$ git stash
-Saved working directory and index state WIP on main: 0613e6a Update README.md
+Saved working directory and index state WIP on dev: 0613e6a Update README.md
 zkaynl7@zkaynl7-ThinkPad-T480:~/Gym-Git-Exercise-Solutions$ git stash list
-stash@{0}: WIP on main: 0613e6a Update README.md
-stash@{1}: WIP on main: 0613e6a Update README.md
-stash@{2}: WIP on main: 0613e6a Update README.md
+stash@{0}: WIP on dev: 0613e6a Update README.md
+stash@{1}: WIP on dev: 0613e6a Update README.md
+stash@{2}: WIP on dev: 0613e6a Update README.md
 zkaynl7@zkaynl7-ThinkPad-T480:~/Gym-Git-Exercise-Solutions$ git stash pop stash@{1}
-On branch main
-Your branch is up to date with 'origin/main'.
+On branch dev
+Your branch is up to date with 'dev'.
 
 Changes to be committed:
   (use "git restore --staged <file>..." to unstage)
@@ -186,8 +186,8 @@ zkaynl7@zkaynl7-ThinkPad-T480:~/Gym-Git-Exercise-Solutions$ git stash list
 stash@{0}: WIP on main: 0613e6a Update README.md
 stash@{1}: WIP on main: 0613e6a Update README.md
 zkaynl7@zkaynl7-ThinkPad-T480:~/Gym-Git-Exercise-Solutions$ git stash pop stash@{1}
-On branch main
-Your branch is up to date with 'origin/main'.
+On branch dev
+Your branch is up to date with 'dev'.
 
 Changes to be committed:
   (use "git restore --staged <file>..." to unstage)
@@ -197,11 +197,11 @@ Changes to be committed:
 Dropped stash@{1} (363403fb82ae4442b01c04dad97a9501b08602a9)
 zkaynl7@zkaynl7-ThinkPad-T480:~/Gym-Git-Exercise-Solutions$ git add --all
 zkaynl7@zkaynl7-ThinkPad-T480:~/Gym-Git-Exercise-Solutions$ git commit -m "Changes committed and ready to be pushed"
-[main eccf05c] Changes committed and ready to be pushed
+[dev eccf05c] Changes committed and ready to be pushed
  2 files changed, 22 insertions(+)
  create mode 100644 about.html
  create mode 100644 home.html
-zkaynl7@zkaynl7-ThinkPad-T480:~/Gym-Git-Exercise-Solutions$ git push origin main
+zkaynl7@zkaynl7-ThinkPad-T480:~/Gym-Git-Exercise-Solutions$ git push origin dev
 Enumerating objects: 5, done.
 Counting objects: 100% (5/5), done.
 Delta compression using up to 8 threads
@@ -210,12 +210,12 @@ Writing objects: 100% (4/4), 519 bytes | 259.00 KiB/s, done.
 Total 4 (delta 1), reused 0 (delta 0), pack-reused 0
 remote: Resolving deltas: 100% (1/1), done.
 To https://github.com/Nick-Lemy/Gym-Git-Exercise-Solutions.git
-   0613e6a..eccf05c  main -> main
+   0613e6a..eccf05c  dev -> dev
 zkaynl7@zkaynl7-ThinkPad-T480:~/Gym-Git-Exercise-Solutions$ git stash list
-stash@{0}: WIP on main: 0613e6a Update README.md
+stash@{0}: WIP on dev: 0613e6a Update README.md
 zkaynl7@zkaynl7-ThinkPad-T480:~/Gym-Git-Exercise-Solutions$ git stash pop stash@{0}
-On branch main
-Your branch is up to date with 'origin/main'.
+On branch dev
+Your branch is up to date with 'dev'.
 
 Changes to be committed:
   (use "git restore --staged <file>..." to unstage)
@@ -225,8 +225,8 @@ Dropped stash@{0} (9f69073eb6f057287c2e50c1b95cb335b93a0556)
 zkaynl7@zkaynl7-ThinkPad-T480:~/Gym-Git-Exercise-Solutions$ git reset --hard
 HEAD is now at eccf05c Changes committed and ready to be pushed
 zkaynl7@zkaynl7-ThinkPad-T480:~/Gym-Git-Exercise-Solutions$ git status
-On branch main
-Your branch is up to date with 'origin/main'.
+On branch dev
+Your branch is up to date with 'dev'.
 
 nothing to commit, working tree clean
 zkaynl7@zkaynl7-ThinkPad-T480:~/Gym-Git-Exercise-Solutions$ ls
