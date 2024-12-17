@@ -175,7 +175,7 @@ stash@{1}: WIP on dev: 0613e6a Update README.md
 stash@{2}: WIP on dev: 0613e6a Update README.md
 zkaynl7@zkaynl7-ThinkPad-T480:~/Gym-Git-Exercise-Solutions$ git stash pop stash@{1}
 On branch dev
-Your branch is up to date with 'dev'.
+Your branch is up to date with 'origin/dev'.
 
 Changes to be committed:
   (use "git restore --staged <file>..." to unstage)
@@ -187,7 +187,7 @@ stash@{0}: WIP on main: 0613e6a Update README.md
 stash@{1}: WIP on main: 0613e6a Update README.md
 zkaynl7@zkaynl7-ThinkPad-T480:~/Gym-Git-Exercise-Solutions$ git stash pop stash@{1}
 On branch dev
-Your branch is up to date with 'dev'.
+Your branch is up to date with 'origin/dev'.
 
 Changes to be committed:
   (use "git restore --staged <file>..." to unstage)
@@ -215,7 +215,7 @@ zkaynl7@zkaynl7-ThinkPad-T480:~/Gym-Git-Exercise-Solutions$ git stash list
 stash@{0}: WIP on dev: 0613e6a Update README.md
 zkaynl7@zkaynl7-ThinkPad-T480:~/Gym-Git-Exercise-Solutions$ git stash pop stash@{0}
 On branch dev
-Your branch is up to date with 'dev'.
+Your branch is up to date with 'origin/dev'.
 
 Changes to be committed:
   (use "git restore --staged <file>..." to unstage)
@@ -226,7 +226,7 @@ zkaynl7@zkaynl7-ThinkPad-T480:~/Gym-Git-Exercise-Solutions$ git reset --hard
 HEAD is now at eccf05c Changes committed and ready to be pushed
 zkaynl7@zkaynl7-ThinkPad-T480:~/Gym-Git-Exercise-Solutions$ git status
 On branch dev
-Your branch is up to date with 'dev'.
+Your branch is up to date with 'origin/dev'.
 
 nothing to commit, working tree clean
 zkaynl7@zkaynl7-ThinkPad-T480:~/Gym-Git-Exercise-Solutions$ ls
