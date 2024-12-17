@@ -1248,3 +1248,56 @@ To https://github.com/Nick-Lemy/Gym-Git-Exercise-Solutions.git
  * [new branch]      ft/home-page-redesign -> ft/home-page-redesign
 zkaynl7@zkaynl7-ThinkPad-T480:~/Gym-Git-Exercise-Solutions$
 ```
+
+## Bundle 4
+
+### Exercise 1
+
+```console
+zkaynl7@zkaynl7-ThinkPad-T480:~/Gym-Git-Exercise-Solutions$ git checkout main
+Switched to branch 'main'
+Your branch is behind 'origin/main' by 4 commits, and can be fast-forwarded.
+  (use "git pull" to update your local branch)
+zkaynl7@zkaynl7-ThinkPad-T480:~/Gym-Git-Exercise-Solutions$ git pull
+Updating 5ce0e23..e611661
+Fast-forward
+ README.md | 63 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ home.html |  4 ++--
+ 2 files changed, 65 insertions(+), 2 deletions(-)
+zkaynl7@zkaynl7-ThinkPad-T480:~/Gym-Git-Exercise-Solutions$ git remote add git-copy https://github.com/Nick-Lemy/Bundle-4-Exercise-1.git
+zkaynl7@zkaynl7-ThinkPad-T480:~/Gym-Git-Exercise-Solutions$ git remote
+git-copy
+origin
+zkaynl7@zkaynl7-ThinkPad-T480:~/Gym-Git-Exercise-Solutions$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+zkaynl7@zkaynl7-ThinkPad-T480:~/Gym-Git-Exercise-Solutions$ git add -all
+error: did you mean `--all` (with two dashes)?
+zkaynl7@zkaynl7-ThinkPad-T480:~/Gym-Git-Exercise-Solutions$ git add --all
+zkaynl7@zkaynl7-ThinkPad-T480:~/Gym-Git-Exercise-Solutions$ git commit -m "home page updated"
+[main dc04489] home page updated
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+zkaynl7@zkaynl7-ThinkPad-T480:~/Gym-Git-Exercise-Solutions$ git push origin main
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 306 bytes | 306.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/Nick-Lemy/Gym-Git-Exercise-Solutions.git
+   e611661..dc04489  main -> main
+zkaynl7@zkaynl7-ThinkPad-T480:~/Gym-Git-Exercise-Solutions$ git push git-copy main
+Enumerating objects: 88, done.
+Counting objects: 100% (88/88), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (77/77), done.
+Writing objects: 100% (88/88), 24.03 KiB | 534.00 KiB/s, done.
+Total 88 (delta 32), reused 16 (delta 3), pack-reused 0
+remote: Resolving deltas: 100% (32/32), done.
+To https://github.com/Nick-Lemy/Bundle-4-Exercise-1.git
+ * [new branch]      main -> main
+zkaynl7@zkaynl7-ThinkPad-T480:~/Gym-Git-Exercise-Solutions$
+```
