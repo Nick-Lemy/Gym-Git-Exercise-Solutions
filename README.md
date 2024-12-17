@@ -50,7 +50,7 @@ zkaynl7@zkaynl7-ThinkPad-T480:~/Documents/git-bundle/exercise-1$ git commit -m "
 [main (root-commit) 6edd66b] changes staged and committed
  1 file changed, 1 insertion(+)
  create mode 100644 test_file
-zkaynl7@zkaynl7-ThinkPad-T480:~/Documents/git-bundle/exercise-1$ git remote add origin main https://[sorry can\'t let u see my token]@github.com/Nick-Lemy/Gym-Git-Exercise-Solutions
+zkaynl7@zkaynl7-ThinkPad-T480:~/Documents/git-bundle/exercise-1$ git remote add origin main https://[sorry can't let u see my token]@github.com/Nick-Lemy/Gym-Git-Exercise-Solutions
 usage: git remote add [<options>] <name> <url>
 
     -f, --[no-]fetch      fetch the remote branches
