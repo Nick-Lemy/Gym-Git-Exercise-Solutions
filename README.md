@@ -3,6 +3,7 @@
 ## Bundle 1
 
 ### Exercise 1
+
 ```console
 zkaynl7@zkaynl7-ThinkPad-T480:~/Documents/git-bundle$ mkdir exercise-1
 zkaynl7@zkaynl7-ThinkPad-T480:~/Documents/git-bundle$ cd exercise-1/
@@ -10,12 +11,12 @@ zkaynl7@zkaynl7-ThinkPad-T480:~/Documents/git-bundle/exercise-1$ git init
 hint: Using 'master' as the name for the initial branch. This default branch name
 hint: is subject to change. To configure the initial branch name to use in all
 hint: of your new repositories, which will suppress this warning, call:
-hint: 
+hint:
 hint: 	git config --global init.defaultBranch <name>
-hint: 
+hint:
 hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
 hint: 'development'. The just-created branch can be renamed via this command:
-hint: 
+hint:
 hint: 	git branch -m <name>
 Initialized empty Git repository in /home/zkaynl7/Documents/git-bundle/exercise-1/.git/
 zkaynl7@zkaynl7-ThinkPad-T480:~/Documents/git-bundle/exercise-1$ echo "Task 2: Add files" > test_file
@@ -104,7 +105,7 @@ upstream, see 'push.autoSetupRemote' in 'git help config'.
 
 zkaynl7@zkaynl7-ThinkPad-T480:~/Documents/git-bundle/exercise-1$ git push --set-upstream origin main
 Username for 'https://github.com': Nick-Lemy
-Password for 'https://Nick-Lemy@github.com': 
+Password for 'https://Nick-Lemy@github.com':
 Enumerating objects: 3, done.
 Counting objects: 100% (3/3), done.
 Writing objects: 100% (3/3), 247 bytes | 247.00 KiB/s, done.
@@ -116,24 +117,24 @@ zkaynl7@zkaynl7-ThinkPad-T480:~/Documents/git-bundle/exercise-1$ git checkout -b
 Switched to a new branch 'dev'
 zkaynl7@zkaynl7-ThinkPad-T480:~/Documents/git-bundle/exercise-1$ git push origin dev
 Username for 'https://github.com': Nick-Lemy
-Password for 'https://Nick-Lemy@github.com': 
+Password for 'https://Nick-Lemy@github.com':
 Total 0 (delta 0), reused 0 (delta 0), pack-reused 0
-remote: 
+remote:
 remote: Create a pull request for 'dev' on GitHub by visiting:
 remote:      https://github.com/Nick-Lemy/Gym-Git-Exercise-Solutions/pull/new/dev
-remote: 
+remote:
 To https://github.com/Nick-Lemy/Gym-Git-Exercise-Solutions.git
  * [new branch]      dev -> dev
 zkaynl7@zkaynl7-ThinkPad-T480:~/Documents/git-bundle/exercise-1$ git checkout -b test
 Switched to a new branch 'test'
 zkaynl7@zkaynl7-ThinkPad-T480:~/Documents/git-bundle/exercise-1$ git push origin test
 Username for 'https://github.com': Nick-Lemy
-Password for 'https://Nick-Lemy@github.com': 
+Password for 'https://Nick-Lemy@github.com':
 Total 0 (delta 0), reused 0 (delta 0), pack-reused 0
-remote: 
+remote:
 remote: Create a pull request for 'test' on GitHub by visiting:
 remote:      https://github.com/Nick-Lemy/Gym-Git-Exercise-Solutions/pull/new/test
-remote: 
+remote:
 To https://github.com/Nick-Lemy/Gym-Git-Exercise-Solutions.git
  * [new branch]      test -> test
 zkaynl7@zkaynl7-ThinkPad-T480:~/Documents/git-bundle/exercise-1$ git checkout dev
@@ -142,7 +143,7 @@ zkaynl7@zkaynl7-ThinkPad-T480:~/Documents/git-bundle/exercise-1$ git branch -d t
 Deleted branch test (was 6edd66b).
 zkaynl7@zkaynl7-ThinkPad-T480:~/Documents/git-bundle/exercise-1$ git push origin --delete test
 Username for 'https://github.com': Nick-Lemy
-Password for 'https://Nick-Lemy@github.com': 
+Password for 'https://Nick-Lemy@github.com':
 To https://github.com/Nick-Lemy/Gym-Git-Exercise-Solutions.git
  - [deleted]         test
 zkaynl7@zkaynl7-ThinkPad-T480:~/Documents/git-bundle/exercise-1$ ls
@@ -151,4 +152,84 @@ zkaynl7@zkaynl7-ThinkPad-T480:~/Documents/git-bundle/exercise-1$ git checkout ma
 Switched to branch 'main'
 Your branch is up to date with 'origin/main'.
 zkaynl7@zkaynl7-ThinkPad-T480:~/Documents/git-bundle/exercise-1$ nano README.md
+```
+
+### Exercise 2
+
+```console
+zkaynl7@zkaynl7-ThinkPad-T480:~/Gym-Git-Exercise-Solutions$ touch home.html
+zkaynl7@zkaynl7-ThinkPad-T480:~/Gym-Git-Exercise-Solutions$ git add home.html
+zkaynl7@zkaynl7-ThinkPad-T480:~/Gym-Git-Exercise-Solutions$ git stash
+Saved working directory and index state WIP on main: 0613e6a Update README.md
+zkaynl7@zkaynl7-ThinkPad-T480:~/Gym-Git-Exercise-Solutions$ touch about.html
+zkaynl7@zkaynl7-ThinkPad-T480:~/Gym-Git-Exercise-Solutions$ git add about.html
+zkaynl7@zkaynl7-ThinkPad-T480:~/Gym-Git-Exercise-Solutions$ git stash
+Saved working directory and index state WIP on main: 0613e6a Update README.md
+zkaynl7@zkaynl7-ThinkPad-T480:~/Gym-Git-Exercise-Solutions$ touch team.html
+zkaynl7@zkaynl7-ThinkPad-T480:~/Gym-Git-Exercise-Solutions$ git add team.html
+zkaynl7@zkaynl7-ThinkPad-T480:~/Gym-Git-Exercise-Solutions$ git stash
+Saved working directory and index state WIP on main: 0613e6a Update README.md
+zkaynl7@zkaynl7-ThinkPad-T480:~/Gym-Git-Exercise-Solutions$ git stash list
+stash@{0}: WIP on main: 0613e6a Update README.md
+stash@{1}: WIP on main: 0613e6a Update README.md
+stash@{2}: WIP on main: 0613e6a Update README.md
+zkaynl7@zkaynl7-ThinkPad-T480:~/Gym-Git-Exercise-Solutions$ git stash pop stash@{1}
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   about.html
+
+Dropped stash@{1} (bd2c9daa84c90330100608bd999e9884d3a21f1f)
+zkaynl7@zkaynl7-ThinkPad-T480:~/Gym-Git-Exercise-Solutions$ git stash list
+stash@{0}: WIP on main: 0613e6a Update README.md
+stash@{1}: WIP on main: 0613e6a Update README.md
+zkaynl7@zkaynl7-ThinkPad-T480:~/Gym-Git-Exercise-Solutions$ git stash pop stash@{1}
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   about.html
+        new file:   home.html
+
+Dropped stash@{1} (363403fb82ae4442b01c04dad97a9501b08602a9)
+zkaynl7@zkaynl7-ThinkPad-T480:~/Gym-Git-Exercise-Solutions$ git add --all
+zkaynl7@zkaynl7-ThinkPad-T480:~/Gym-Git-Exercise-Solutions$ git commit -m "Changes committed and ready to be pushed"
+[main eccf05c] Changes committed and ready to be pushed
+ 2 files changed, 22 insertions(+)
+ create mode 100644 about.html
+ create mode 100644 home.html
+zkaynl7@zkaynl7-ThinkPad-T480:~/Gym-Git-Exercise-Solutions$ git push origin main
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (4/4), 519 bytes | 259.00 KiB/s, done.
+Total 4 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), done.
+To https://github.com/Nick-Lemy/Gym-Git-Exercise-Solutions.git
+   0613e6a..eccf05c  main -> main
+zkaynl7@zkaynl7-ThinkPad-T480:~/Gym-Git-Exercise-Solutions$ git stash list
+stash@{0}: WIP on main: 0613e6a Update README.md
+zkaynl7@zkaynl7-ThinkPad-T480:~/Gym-Git-Exercise-Solutions$ git stash pop stash@{0}
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   team.html
+
+Dropped stash@{0} (9f69073eb6f057287c2e50c1b95cb335b93a0556)
+zkaynl7@zkaynl7-ThinkPad-T480:~/Gym-Git-Exercise-Solutions$ git reset --hard
+HEAD is now at eccf05c Changes committed and ready to be pushed
+zkaynl7@zkaynl7-ThinkPad-T480:~/Gym-Git-Exercise-Solutions$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+zkaynl7@zkaynl7-ThinkPad-T480:~/Gym-Git-Exercise-Solutions$ ls
+about.html  home.html  README.md
+zkaynl7@zkaynl7-ThinkPad-T480:~/Gym-Git-Exercise-Solutions$
 ```
