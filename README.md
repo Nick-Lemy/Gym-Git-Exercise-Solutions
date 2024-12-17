@@ -1,5 +1,7 @@
 # Gym-Git-Exercise-Solutions
 
+This repository contains solutions of Git Exercises provided by The Gym
+
 ## Bundle 1
 
 ### Exercise 1
@@ -231,5 +233,40 @@ Your branch is up to date with 'origin/dev'.
 nothing to commit, working tree clean
 zkaynl7@zkaynl7-ThinkPad-T480:~/Gym-Git-Exercise-Solutions$ ls
 about.html  home.html  README.md
+zkaynl7@zkaynl7-ThinkPad-T480:~/Gym-Git-Exercise-Solutions$
+```
+
+## Bundle 2
+
+```console
+zkaynl7@zkaynl7-ThinkPad-T480:~/Gym-Git-Exercise-Solutions$ git checkout -b ft/bundle-2
+Switched to a new branch 'ft/bundle-2'
+zkaynl7@zkaynl7-ThinkPad-T480:~/Gym-Git-Exercise-Solutions$ touch service.html
+zkaynl7@zkaynl7-ThinkPad-T480:~/Gym-Git-Exercise-Solutions$ git status
+On branch ft/bundle-2
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        service.html
+
+nothing added to commit but untracked files present (use "git add" to track)
+zkaynl7@zkaynl7-ThinkPad-T480:~/Gym-Git-Exercise-Solutions$ git add service.html
+zkaynl7@zkaynl7-ThinkPad-T480:~/Gym-Git-Exercise-Solutions$ git commit -m "Service created"
+[ft/bundle-2 fed067d] Service created
+ 1 file changed, 11 insertions(+)
+ create mode 100644 service.html
+zkaynl7@zkaynl7-ThinkPad-T480:~/Gym-Git-Exercise-Solutions$ git push origin ft/bundle-2
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 442 bytes | 442.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+remote:
+remote: Create a pull request for 'ft/bundle-2' on GitHub by visiting:
+remote:      https://github.com/Nick-Lemy/Gym-Git-Exercise-Solutions/pull/new/ft/bundle-2
+remote:
+To https://github.com/Nick-Lemy/Gym-Git-Exercise-Solutions.git
+ * [new branch]      ft/bundle-2 -> ft/bundle-2
 zkaynl7@zkaynl7-ThinkPad-T480:~/Gym-Git-Exercise-Solutions$
 ```
