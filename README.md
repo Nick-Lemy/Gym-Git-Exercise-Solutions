@@ -1185,3 +1185,66 @@ remote: Resolving deltas: 100% (1/1), completed with 1 local object.
 To https://github.com/Nick-Lemy/Gym-Git-Exercise-Solutions.git
    9dab256..dd068c5  ft/team-page -> ft/team-page
 ```
+
+### Exercise 2
+
+```console
+zkaynl7@zkaynl7-ThinkPad-T480:~/Gym-Git-Exercise-Solutions$ git checkout ft/faq-page
+Already on 'ft/faq-page'
+zkaynl7@zkaynl7-ThinkPad-T480:~/Gym-Git-Exercise-Solutions$ git checkout -b ft/home-page-redesign
+Switched to a new branch 'ft/home-page-redesign'
+zkaynl7@zkaynl7-ThinkPad-T480:~/Gym-Git-Exercise-Solutions$ git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+zkaynl7@zkaynl7-ThinkPad-T480:~/Gym-Git-Exercise-Solutions$ ls
+about.html  faq.html  home.html  README.md  service.html  team.html
+zkaynl7@zkaynl7-ThinkPad-T480:~/Gym-Git-Exercise-Solutions$ git add --all
+zkaynl7@zkaynl7-ThinkPad-T480:~/Gym-Git-Exercise-Solutions$ git commit -m "some changes"
+[main 5ce0e23] some changes
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+zkaynl7@zkaynl7-ThinkPad-T480:~/Gym-Git-Exercise-Solutions$ git status
+On branch main
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+zkaynl7@zkaynl7-ThinkPad-T480:~/Gym-Git-Exercise-Solutions$ git push origin main
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 306 bytes | 153.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/Nick-Lemy/Gym-Git-Exercise-Solutions.git
+   4ea7f81..5ce0e23  main -> main
+zkaynl7@zkaynl7-ThinkPad-T480:~/Gym-Git-Exercise-Solutions$ git checkout ft/home-page-rede
+sign
+Switched to branch 'ft/home-page-redesign'
+zkaynl7@zkaynl7-ThinkPad-T480:~/Gym-Git-Exercise-Solutions$ git rebase main
+Successfully rebased and updated refs/heads/ft/home-page-redesign.
+zkaynl7@zkaynl7-ThinkPad-T480:~/Gym-Git-Exercise-Solutions$ ls
+about.html  faq.html  home.html  README.md  service.html  team.html
+zkaynl7@zkaynl7-ThinkPad-T480:~/Gym-Git-Exercise-Solutions$ git add home.html
+zkaynl7@zkaynl7-ThinkPad-T480:~/Gym-Git-Exercise-Solutions$ git commit -m "home changed"
+[ft/home-page-redesign 055fc8f] home changed
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+zkaynl7@zkaynl7-ThinkPad-T480:~/Gym-Git-Exercise-Solutions$ git status
+On branch ft/home-page-redesign
+nothing to commit, working tree clean
+zkaynl7@zkaynl7-ThinkPad-T480:~/Gym-Git-Exercise-Solutions$ git push origin ft/home-page-redesign
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 304 bytes | 304.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+remote:
+remote: Create a pull request for 'ft/home-page-redesign' on GitHub by visiting:
+remote:      https://github.com/Nick-Lemy/Gym-Git-Exercise-Solutions/pull/new/ft/home-page-redesign
+remote:
+To https://github.com/Nick-Lemy/Gym-Git-Exercise-Solutions.git
+ * [new branch]      ft/home-page-redesign -> ft/home-page-redesign
+zkaynl7@zkaynl7-ThinkPad-T480:~/Gym-Git-Exercise-Solutions$
+```
