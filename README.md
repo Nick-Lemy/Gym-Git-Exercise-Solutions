@@ -1500,3 +1500,99 @@ To https://github.com/Nick-Lemy/git-cafe-exercise.git
    d1d3f9c..a5ec8ae  main -> main
 zkaynl7@zkaynl7-ThinkPad-T480:~/git-cafe-exercise$
 ```
+
+## Bundle 6
+
+### Exercise 1
+
+```console
+zkaynl7@zkaynl7-ThinkPad-T480:~/git-cafe-exercise$ git branch
+* main
+zkaynl7@zkaynl7-ThinkPad-T480:~/git-cafe-exercise$ git checkout -b ft/menu-modif
+Switched to a new branch 'ft/menu-modif'
+zkaynl7@zkaynl7-ThinkPad-T480:~/git-cafe-exercise$ ls
+bat  images        index-2.html  index-4.html  js
+css  index-1.html  index-3.html  index.html    README.md
+zkaynl7@zkaynl7-ThinkPad-T480:~/git-cafe-exercise$ touch menu.html
+zkaynl7@zkaynl7-ThinkPad-T480:~/git-cafe-exercise$ git add --all
+zkaynl7@zkaynl7-ThinkPad-T480:~/git-cafe-exercise$ git status
+On branch ft/menu-modif
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   menu.html
+
+zkaynl7@zkaynl7-ThinkPad-T480:~/git-cafe-exercise$ git commit -m "Page menu added"
+[ft/menu-modif 5f2bee4] Page menu added
+ 1 file changed, 11 insertions(+)
+ create mode 100644 menu.html
+zkaynl7@zkaynl7-ThinkPad-T480:~/git-cafe-exercise$ git push
+fatal: The current branch ft/menu-modif has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin ft/menu-modif
+
+To have this happen automatically for branches without a tracking
+upstream, see 'push.autoSetupRemote' in 'git help config'.
+
+zkaynl7@zkaynl7-ThinkPad-T480:~/git-cafe-exercise$ git push --set-upstream origin ft/menu-modif
+fatal: unable to access 'https://github.com/Nick-Lemy/git-cafe-exercise.git/': Failed to connect to github.com port 443 after 27 ms: Couldn't connect to server
+zkaynl7@zkaynl7-ThinkPad-T480:~/git-cafe-exercise$ git push --set-upstream origin ft/menu-modif
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 452 bytes | 452.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+remote:
+remote: Create a pull request for 'ft/menu-modif' on GitHub by visiting:
+remote:      https://github.com/Nick-Lemy/git-cafe-exercise/pull/new/ft/menu-modif
+remote:
+To https://github.com/Nick-Lemy/git-cafe-exercise.git
+ * [new branch]      ft/menu-modif -> ft/menu-modif
+branch 'ft/menu-modif' set up to track 'origin/ft/menu-modif'.
+zkaynl7@zkaynl7-ThinkPad-T480:~/git-cafe-exercise$
+```
+
+### Exercise 2
+
+```console
+zkaynl7@zkaynl7-ThinkPad-T480:~/git-cafe-exercise$ git checkout -b ft/bug-fix
+Switched to a new branch 'ft/bug-fix'
+zkaynl7@zkaynl7-ThinkPad-T480:~/git-cafe-exercise$ git add --all
+zkaynl7@zkaynl7-ThinkPad-T480:~/git-cafe-exercise$ git commmit -m "Title chang
+ed"
+git: 'commmit' is not a git command. See 'git --help'.
+
+The most similar command is
+        commit
+zkaynl7@zkaynl7-ThinkPad-T480:~/git-cafe-exercise$ git commit -m "Title change
+d"
+[ft/bug-fix 6278c83] Title changed
+ 1 file changed, 232 insertions(+), 164 deletions(-)
+zkaynl7@zkaynl7-ThinkPad-T480:~/git-cafe-exercise$ git push
+fatal: The current branch ft/bug-fix has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin ft/bug-fix
+
+To have this happen automatically for branches without a tracking
+upstream, see 'push.autoSetupRemote' in 'git help config'.
+
+zkaynl7@zkaynl7-ThinkPad-T480:~/git-cafe-exercise$ git push --set-upstream origin ft/bug-fix
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 1.41 KiB | 481.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+remote:
+remote: Create a pull request for 'ft/bug-fix' on GitHub by visiting:
+remote:      https://github.com/Nick-Lemy/git-cafe-exercise/pull/new/ft/bug-fix
+remote:
+To https://github.com/Nick-Lemy/git-cafe-exercise.git
+ * [new branch]      ft/bug-fix -> ft/bug-fix
+branch 'ft/bug-fix' set up to track 'origin/ft/bug-fix'.
+zkaynl7@zkaynl7-ThinkPad-T480:~/git-cafe-exercise$
+```
