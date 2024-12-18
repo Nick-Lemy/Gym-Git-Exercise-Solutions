@@ -1596,3 +1596,22 @@ To https://github.com/Nick-Lemy/git-cafe-exercise.git
 branch 'ft/bug-fix' set up to track 'origin/ft/bug-fix'.
 zkaynl7@zkaynl7-ThinkPad-T480:~/git-cafe-exercise$
 ```
+
+### Exercise 3
+
+```console
+zkaynl7@zkaynl7-ThinkPad-T480:~/git-cafe-exercise$ git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+zkaynl7@zkaynl7-ThinkPad-T480:~/git-cafe-exercise$ git add .
+zkaynl7@zkaynl7-ThinkPad-T480:~/git-cafe-exercise$ git commit -m "number changed"
+[main 98efe02] number changed
+ 1 file changed, 231 insertions(+), 163 deletions(-)
+zkaynl7@zkaynl7-ThinkPad-T480:~/git-cafe-exercise$ git push
+remote: Invalid username or password.
+fatal: Authentication failed for 'https://github.com/Nick-Lemy/git-cafe-exercise.git/'
+zkaynl7@zkaynl7-ThinkPad-T480:~/git-cafe-exercise$ git push
+remote: Invalid username or password.
+fatal: Authentication failed for 'https://github.com/Nick-Lemy/git-cafe-exercise.git/'
+zkaynl7@zkaynl7-ThinkPad-T480:~/git-cafe-exercise$
+```
